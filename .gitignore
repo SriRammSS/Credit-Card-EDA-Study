@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data files (large — keep out of git)
+*.csv
+*.xlsx
+*.parquet
+*.json
+data/
+
+# Environment
+.env
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
