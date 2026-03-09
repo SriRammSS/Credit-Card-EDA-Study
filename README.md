@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💳 Credit Card EDA — Loan Default Risk Analysis
+# Credit Card EDA — Loan Default Risk Analysis
 
 ### End-to-End Exploratory Data Analysis on Financial Risk Data
 
@@ -36,38 +36,38 @@ This case study tackles a real-world class imbalance problem in financial risk m
 
 ```
 Raw Data (application_data.csv + previous_application.csv)
-        │
-        ▼
+ │
+ ▼
 ┌──────────────────────────────────────────────────────────────┐
-│  Data Cleaning                                                │
-│  • Drop columns >35% null                                    │
-│  • Mode/median imputation for remaining nulls                │
-│  • Fix DAYS columns (abs() — negative values)                │
-│  • 'XNA' gender → 'F', 'XNA' org type → 'Pensioner'        │
-│  • Y/N encode → 1/0                                          │
+│ Data Cleaning │
+│ • Drop columns >35% null │
+│ • Mode/median imputation for remaining nulls │
+│ • Fix DAYS columns (abs() — negative values) │
+│ • 'XNA' gender → 'F', 'XNA' org type → 'Pensioner' │
+│ • Y/N encode → 1/0 │
 └────────────────────────┬─────────────────────────────────────┘
-                         │
-                         ▼
+ │
+ ▼
 ┌──────────────────────────────────────────────────────────────┐
-│  Feature Engineering                                          │
-│  • AMT_INCOME_TOTAL → 5 quantile bins (VERY_LOW → VERY_HIGH)│
-│  • DAYS_BIRTH → age in years → AGE_GROUP (4 bins)           │
+│ Feature Engineering │
+│ • AMT_INCOME_TOTAL → 5 quantile bins (VERY_LOW → VERY_HIGH)│
+│ • DAYS_BIRTH → age in years → AGE_GROUP (4 bins) │
 └────────────────────────┬─────────────────────────────────────┘
-                         │
-                         ▼
+ │
+ ▼
 ┌──────────────────────────────────────────────────────────────┐
-│  Imbalance Analysis                                           │
-│  • 91.9% non-defaulters, 8.1% defaulters                    │
-│  • Ratio: 11.39:1                                            │
+│ Imbalance Analysis │
+│ • 91.9% non-defaulters, 8.1% defaulters │
+│ • Ratio: 11.39:1 │
 └────────────────────────┬─────────────────────────────────────┘
-                         │
-           ┌─────────────┴─────────────┐
-           ▼                           ▼
-  Univariate Analysis          Bivariate Analysis
-  (Target=0 vs Target=1)       (Categorical × Numerical,
-  Gender, age, income,          Categorical × Categorical)
-  org type, contract,           Custom biplot() isolates
-  family status                 max default % segments
+ │
+ ┌─────────────┴─────────────┐
+ ▼ ▼
+ Univariate Analysis Bivariate Analysis
+ (Target=0 vs Target=1) (Categorical × Numerical,
+ Gender, age, income, Categorical × Categorical)
+ org type, contract, Custom biplot() isolates
+ family status max default % segments
 ```
 
 ---
